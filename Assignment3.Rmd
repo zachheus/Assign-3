@@ -59,10 +59,6 @@ my.function(var1=mydata2$Taxon, var2="Observations") #using the function to coun
 ```
 
 ```{r}
-my.function(var1=mydata2$TotalG, var2="Average") #using the function to determine the mean values of TotalG between the nutrient levels, doing by using group_by to separate the data into the high or low Nutrients condition, then calculating the mean of each condition
-```
-
-```{r}
 mydata3<-mydata2%>% #creating a new dataframe to use for this equation, piping to two different functions
   group_by(Nutrients)%>% #allows the data to be grouped by their nutrient level
   summarise(mean=mean(TotalG)) #produces a data.frame which is a table consisting of the nutrient level and their means

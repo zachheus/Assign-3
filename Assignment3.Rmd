@@ -1,0 +1,14 @@
+---
+title: "Assignment 3"
+author: "Zach Lehman"
+date: "28/01/2021"
+output: html_document
+---
+
+# Assignment 3
+
+## Project Info
+Author: Zach Lehman
+Date: January 28, 2021
+GitHub repository: https://github.com/zachheus/Assign-3
+Username: @zachheus

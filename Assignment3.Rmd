@@ -35,9 +35,9 @@ head(mydata2) #checking the first 6 rows of the new dataframe to ensure that my 
 ```
 
 ```{r}
-my.function<-function(var1=0,var2=0){ #creating the function and setting the default variable values as 0 for each
+my.function<-function(var1=0,var2=0){ #creating the function and setting the default variable values as 0 for each, beginning a loop for the different parts of my equation
   if(var2=="Average"){ #if statement checking if variable 2 = Average
-    print(mean(var1)) #if variable 2 = Average, it prints the mean of variable 1
+    print(summarise(var1, mean=mean(var1))) #if variable 2 = Average, it prints the mean of variable 1
   }
   else if(var2=="Sum"){ #if statement checking if variable 2 = Sum
     print(sum(var1)) #if variable 2 = Sum, it prints the sum of variable 1
@@ -59,9 +59,13 @@ my.function(var1=mydata2$Taxon, var2="Observations") #using the function to coun
 ```
 
 ```{r}
-my.function(var1=mydata3$TotalG, var2="Average") #using the function to determine the mean values of TotalG between the nutrient levels
+my.function(var1=mydata2$TotalG, var2="Average") #using the function to determine the mean values of TotalG between the nutrient levels, doing by using group_by to separate the data into the high or low Nutrients condition, then calculating the mean of each condition
 ```
 
+```{r}
+mydata3<-mydata2%>% #creating a new dataframe to use for this equation, piping to two different functions
+  group_by(Nutrients)%>% #allows the data to be grouped by their nutrient level
+  summarise(mean=mean(TotalG)) #produces a data.frame which is a table consisting of the nutrient level and their means
 
-
-
+my.function(var1=mydata3, var2="Average") #prints the mean for each nutrient level
+```

@@ -16,12 +16,5 @@ Username: @zachheus
 ```{r}
 library(dplyr) #load the dplyr package for future use
 setwd("/Users/zachlehman/OneDrive - Queen's University/BIOL 432/Assign-3/InputData/") #setting my working directory to the location on my computer where the fallopia data csv file can be found
-mydata<-read.csv("")
+mydata<-read.csv("FallopiaData.csv") #reads the fallopia data csv file and puts it in a dataframe
 ```
-
-
-
-
-
-
-

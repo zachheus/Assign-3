@@ -69,3 +69,7 @@ mydata3<-mydata2%>% #creating a new dataframe to use for this equation, piping t
 
 my.function(var1=mydata3, var2="Average") #prints the mean for each nutrient level
 ```
+
+```{r}
+write.csv(mydata2,"/Users/zachlehman/OneDrive - Queen's University/BIOL 432/Assign-3/Output/'WrangledData.csv") #creates a new csv file for mydata2 and puts it in the output folder
+```

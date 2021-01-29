@@ -18,3 +18,9 @@ library(dplyr) #load the dplyr package for future use
 setwd("/Users/zachlehman/OneDrive - Queen's University/BIOL 432/Assign-3/InputData/") #setting my working directory to the location on my computer where the fallopia data csv file can be found
 mydata<-read.csv("FallopiaData.csv") #reads the fallopia data csv file and puts it in a dataframe
 ```
+
+```{r}
+mydata1<-filter(mydata, Total>60) #filters out rows where the value for Total is less than 60
+head(mydata1) #checking the first 6 rows of the new dataframe to ensure that my filter worked
+```
+

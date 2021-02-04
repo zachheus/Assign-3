@@ -30,3 +30,7 @@ MData<-MData%>% #creating a new MData dataframe using the first MData object pip
 
 print(MData)
 ```
+
+```{r}
+write.csv(MData,"/Users/zachlehman/OneDrive - Queen's University/BIOL 432/Assign-3/Output/MeasShort.csv") #writes a new .csv file called MeasShort using the MData dataframe, and outputs it to the output folder that I created for Assignment 3
+```

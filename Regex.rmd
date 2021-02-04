@@ -9,7 +9,7 @@ output: html_document
 
 ## Project Info
 Author: Zach Lehman
-Date: January 28, 2021
+Date: February 5, 2021
 GitHub repository: https://github.com/zachheus/Assign-3
 Username: @zachheus
 

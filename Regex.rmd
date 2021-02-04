@@ -24,7 +24,7 @@ library(dplyr) #preparing the dplyr package for later use
 ```{r}
 MData<-MData%>% #creating a new MData dataframe using the first MData object piped to some different functions that will edit it
   mutate(Sp=gsub( #using mutate to add a new column to MData called Sp, Sp will be created by using gsub to substitude the long form names of each species with a shorter form
-    "anis|edes|quus|ptenodytes|pis", ". ", MData$organism #asking the gsub function to recognize any of the given patterns, which correspond to every letter after the first in each genus. Then the gsub function replaces these patterns with a ". ", and searches the organism column of MData in order to find the patterns.
+    "anis|edes|quus|ptenodytes|pis", ". ", organism #asking the gsub function to recognize any of the given patterns, which correspond to every letter after the first in each genus. Then the gsub function replaces these patterns with a ". ", and searches the organism column of MData in order to find the patterns.
   ))%>% #piping the completed mutate function to another function
   select(Sp, limb.width, limb.length, observer) #selecting the columns that I want displayed in the new MData column in the order that I want them to be displayed in, using Sp to replace the original organism column
 

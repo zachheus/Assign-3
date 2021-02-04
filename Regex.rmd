@@ -1,0 +1,31 @@
+---
+title: "Regex.rmd"
+author: "Zach Lehman"
+date: "03/02/2021"
+output: html_document
+---
+
+# Assignment 4
+
+## Project Info
+Author: Zach Lehman
+Date: January 28, 2021
+GitHub repository: https://github.com/zachheus/Assign-3
+Username: @zachheus
+
+### Part I: Data Science
+
+```{r}
+setwd("/Users/zachlehman/OneDrive - Queen's University/BIOL 432/") #setting my working directory to make pulling the .csv file easier
+MData<-read.csv("measurements.csv") #importing the .csv file into an object called MData
+```
+
+
+
+
+
+
+
+
+
+
